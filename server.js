@@ -9,6 +9,7 @@ const app = require('./app');
 const mongoose = require('mongoose');
 
 const DB = process.env.DATABASE.replace('%PASSWORD%', process.env.PASSWORD);
+console.log(DB);
 mongoose
   .connect(DB, {
     useNewUrlParser: true,
