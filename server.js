@@ -9,7 +9,7 @@ const app = require('./app');
 const mongoose = require('mongoose');
 
 const DB =
-  'mongodb+srv://mahmoud:<PASSWORD>@cluster0.wuyhhgv.mongodb.net/natours?retryWrites=true&w=majority';
+  'mongodb+srv://mahmoud:pnVVbm3ZozgbemcP@cluster0.wuyhhgv.mongodb.net/natours?retryWrites=true&w=majority';
 mongoose
   .connect(DB, {
     useNewUrlParser: true,
