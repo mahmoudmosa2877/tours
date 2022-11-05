@@ -26,7 +26,7 @@ const handleJWTExpiredError = () => {
 
 const sendErrorDev = (err, req, res) => {
   //Api
-  console.log(req.originalUrl);
+
   if (req.originalUrl.startsWith('/api')) {
     return res.status(err.statusCode).json({
       status: err.status,
@@ -78,7 +78,7 @@ module.exports = (err, req, res, next) => {
   } else if (process.env.NODE_ENV === 'production') {
     let error = { ...err };
     error.message = err.message;
-    console.log(error, err);
+
     if (error.name === 'CastError') error = handleCastErrorDB(error);
     if (error.code === 11000) error = handleDuplicatedFieldDB(error);
     if (error.name === 'validationError') error = validationErrorDB(error);

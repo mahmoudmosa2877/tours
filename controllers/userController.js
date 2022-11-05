@@ -53,7 +53,7 @@ const filterObj = (obj, ...allowedFields) => {
   });
   return newObject;
 };
-//console
+
 exports.getMe = (req, res, next) => {
   req.params.id = req.user.id;
   next();

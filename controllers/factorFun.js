@@ -1,7 +1,7 @@
 const catchAsync = require('./../utils/catchAsync');
 const AppError = require('./../utils/appError');
 const APIFeatures = require('./../utils/apiFeatures');
-//console
+
 exports.getAll = Model =>
   catchAsync(async (req, res, next) => {
     // enable nested routes we get all routes for certain tour
