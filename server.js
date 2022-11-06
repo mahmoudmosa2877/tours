@@ -8,10 +8,10 @@ dotenv.config({ path: './config.env' });
 const app = require('./app');
 const mongoose = require('mongoose');
 
-const DB = process.env.DATABASE.replace('<PASSWORD>', process.env.PASSWORD);
+//onst DB = process.env.DATABASE.replace('<PASSWORD>', process.env.PASSWORD);
 console.log(DB);
 mongoose
-  .connect(DB, {
+  .connect(process.env.DATABASE, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
